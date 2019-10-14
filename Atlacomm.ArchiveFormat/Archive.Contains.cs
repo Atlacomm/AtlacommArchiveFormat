@@ -10,6 +10,7 @@ namespace Atlacomm.ArchiveFormat
     {
         public bool Contains(string filepath)
         {
+            // Return whether or not the Files Dictionary contaisn a file with the specified key
             return Files.Keys.Contains(filepath);
         }
     }

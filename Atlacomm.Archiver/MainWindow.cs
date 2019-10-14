@@ -21,8 +21,8 @@ namespace Atlacomm.Archiver
 
         public void LoadArchive(string path)
         {
-            archive = new Archive(path);
-            rootFolder = archive.GetAsStruct();
+            archive = Archive.Load(path);
+            rootFolder = archive.GetFileHierarchy();
             currentFolder = rootFolder;
         }
 
