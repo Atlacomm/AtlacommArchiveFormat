@@ -8,10 +8,8 @@ namespace Atlacomm.Archiver
         [STAThread]
         static void Main(string[] args)
         {
-            MainWindow mainWindow = new MainWindow();
-
             Application.EnableVisualStyles();
-            Application.Run(mainWindow);
+            Application.Run(new MainWindow());
         }
     }
 }

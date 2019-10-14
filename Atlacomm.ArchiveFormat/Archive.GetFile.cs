@@ -4,6 +4,8 @@
     {
         public byte[] GetFile(string filepath)
         {
+            if (!Contains(filepath)) return null;
+
             long offset = contentOffset;
 
             byte[] ret = null;
