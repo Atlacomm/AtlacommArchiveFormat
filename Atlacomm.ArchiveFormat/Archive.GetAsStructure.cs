@@ -160,7 +160,7 @@ namespace Atlacomm.ArchiveFormat
         {
             ArchiveFolder rootFolder = new ArchiveFolder("ROOT");
 
-            foreach (string file in index.Keys)
+            foreach (string file in Files.Keys)
             {
                 int folderCount = file.Length - file.Replace("/", "").Length;
                 string[] split = file.Split('/');
@@ -190,7 +190,7 @@ namespace Atlacomm.ArchiveFormat
                     }
                 }
 
-                currentFolder.Files.Add(new ArchiveFile(split[folderCount], index[file]));
+                currentFolder.Files.Add(new ArchiveFile(split[folderCount], Files[file].Length));
             }
 
             return rootFolder;

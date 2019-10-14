@@ -6,7 +6,7 @@ namespace Atlacomm.ArchiveFormat
     {
         public void Extract(string folderpath)
         {
-            foreach (string file in index.Keys)
+            foreach (string file in Files.Keys)
             {
                 string filepath = Path.Combine(folderpath, file);
                 string dir = Path.GetDirectoryName(filepath);

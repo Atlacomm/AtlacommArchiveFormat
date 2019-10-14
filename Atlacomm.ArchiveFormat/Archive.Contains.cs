@@ -10,7 +10,7 @@ namespace Atlacomm.ArchiveFormat
     {
         public bool Contains(string filepath)
         {
-            return index.Keys.Contains(filepath);
+            return Files.Keys.Contains(filepath);
         }
     }
 }

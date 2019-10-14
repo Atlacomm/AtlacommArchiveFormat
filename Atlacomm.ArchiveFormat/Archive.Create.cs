@@ -3,11 +3,9 @@ using System.IO;
 
 namespace Atlacomm.ArchiveFormat
 {
-    public delegate void ArchiveUpdateCallback(string file, int percent);
-
     public partial class Archive
     {
-        public static void Create(string source, string destination, ArchiveUpdateCallback archiveUpdateCallback = null)
+        public static void Create(string source, string destination)
         {
             string[] paths = Directory.GetFiles(source, "*", SearchOption.AllDirectories);
 
@@ -62,13 +60,10 @@ namespace Atlacomm.ArchiveFormat
 
                             int percent = (int)(i / (float)fsR.Length * 100);
 
-                            if (percent > lastPercent) archiveUpdateCallback?.Invoke(internalPath, percent);
-
                             lastPercent = percent;
                         }
                         fs.Write(buffer, 0, buffer.Length);
                     }
-                    archiveUpdateCallback?.Invoke(internalPath, 100);
                 }
             }
         }
