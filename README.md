@@ -1,2 +1,2 @@
 # AtlacommArchiveFormat
-C# class library for handling AtlacommArchiveFormat (.aaf) files
+C# class library and archiver for handling Atlacomm Archive Format (.aaf) files
