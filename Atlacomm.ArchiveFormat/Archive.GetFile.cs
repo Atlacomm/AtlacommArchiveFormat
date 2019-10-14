@@ -1,4 +1,6 @@
-﻿namespace Atlacomm.ArchiveFormat
+﻿using System.Collections.Generic;
+
+namespace Atlacomm.ArchiveFormat
 {
     public partial class Archive
     {

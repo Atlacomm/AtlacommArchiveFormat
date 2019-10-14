@@ -25,7 +25,7 @@ namespace Atlacomm.ArchiveFormat
                     data.Add((byte)c);
                 }
 
-                byte[] sizeBytes = BitConverter.GetBytes(Files[file].Length);
+                byte[] sizeBytes = BitConverter.GetBytes((long)Files[file].Length);
                 foreach (byte b in sizeBytes)
                 {
                     data.Add(b);

@@ -169,6 +169,47 @@ namespace Atlacomm.Archiver
             }
 
             saveFileDialog.Filter = cleanFilter;
+            saveFileDialog.FileName = "";
+        }
+
+        private void mainMenu_File_Save_Click(object sender, EventArgs e)
+        {
+            if (archive == null) return;
+
+            string cleanFilter = openFileDialog.Filter;
+
+            saveFileDialog.Filter = "Atlacomm Archive Files|*.aaf|" + saveFileDialog.Filter;
+            saveFileDialog.FileName = "";
+
+            DialogResult result = saveFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                File.WriteAllBytes(saveFileDialog.FileName, archive.BuildArchiveEnrypted());
+            }
+
+            saveFileDialog.Filter = cleanFilter;
+            saveFileDialog.FileName = "";
+        }
+
+        private void mainMenu_File_SaveDecrypted_Click(object sender, EventArgs e)
+        {
+            if (archive == null) return;
+
+            string cleanFilter = openFileDialog.Filter;
+
+            saveFileDialog.Filter = "Atlacomm Archive Files|*.aaf|" + saveFileDialog.Filter;
+            saveFileDialog.FileName = "";
+
+            DialogResult result = saveFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                File.WriteAllBytes(saveFileDialog.FileName, archive.BuildArchive());
+            }
+
+            saveFileDialog.Filter = cleanFilter;
+            saveFileDialog.FileName = "";
         }
     }
 }

@@ -45,6 +45,9 @@
             this.fileContextMenu = new System.Windows.Forms.ContextMenu();
             this.fileContextMenu_Extract = new System.Windows.Forms.MenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.mainMenu_File_Save = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.mainMenu_File_SaveDecrypted = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // pathTextBox
@@ -109,6 +112,9 @@
             this.mainMenu_File.Index = 0;
             this.mainMenu_File.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mainMenu_File_Open,
+            this.mainMenu_File_Save,
+            this.mainMenu_File_SaveDecrypted,
+            this.menuItem1,
             this.mainMenu_File_Exit});
             this.mainMenu_File.Text = "File";
             // 
@@ -120,7 +126,7 @@
             // 
             // mainMenu_File_Exit
             // 
-            this.mainMenu_File_Exit.Index = 1;
+            this.mainMenu_File_Exit.Index = 4;
             this.mainMenu_File_Exit.Text = "Exit";
             this.mainMenu_File_Exit.Click += new System.EventHandler(this.mainMenu_File_Exit_Click);
             // 
@@ -163,6 +169,23 @@
             // 
             this.saveFileDialog.Filter = "All files|*.*";
             // 
+            // mainMenu_File_Save
+            // 
+            this.mainMenu_File_Save.Index = 1;
+            this.mainMenu_File_Save.Text = "Save";
+            this.mainMenu_File_Save.Click += new System.EventHandler(this.mainMenu_File_Save_Click);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 3;
+            this.menuItem1.Text = "-";
+            // 
+            // mainMenu_File_SaveDecrypted
+            // 
+            this.mainMenu_File_SaveDecrypted.Index = 2;
+            this.mainMenu_File_SaveDecrypted.Text = "Save (decrypted)";
+            this.mainMenu_File_SaveDecrypted.Click += new System.EventHandler(this.mainMenu_File_SaveDecrypted_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +219,8 @@
         private System.Windows.Forms.ContextMenu fileContextMenu;
         private System.Windows.Forms.MenuItem fileContextMenu_Extract;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.MenuItem mainMenu_File_Save;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem mainMenu_File_SaveDecrypted;
     }
 }
